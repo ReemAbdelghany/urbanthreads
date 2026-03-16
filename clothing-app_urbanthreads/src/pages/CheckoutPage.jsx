@@ -95,10 +95,7 @@ export default function CheckoutPage(props) {
     try {
       const res = await generateCoupon({
         customerId,
-        ruleId: Number(rule.id),
-        email: props.user?.email,
-        mobile: props.user?.phone,
-        amount: cartSubtotal
+        ruleId: Number(rule.id)
       })
 
       if (res && res._error) {
