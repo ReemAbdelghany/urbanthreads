@@ -1,0 +1,36 @@
+meta {
+  name: Event - Profile Completed
+  type: http
+  seq: 5
+}
+
+post {
+  url: {{baseUrl}}/events
+  body: json
+  auth: inherit
+}
+
+headers {
+  apikey: {{apikey}}
+}
+
+body:json {
+  {
+    "customerId": "{{customerId}}",
+    "events": {
+      "profile_completed": {
+        "display_name": "Reem Abdelghany",
+        "email": "reem.abdelghany@example.com",
+        "phone": "+201012345678",
+        "date_of_birth": "1992-05-14",
+        "address": "Cairo, Egypt",
+        "fields_filled": 5,
+        "completion_percentage": 100
+      }
+    }
+  }
+}
+
+settings {
+  encodeUrl: true
+}

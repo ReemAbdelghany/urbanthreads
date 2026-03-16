@@ -1,0 +1,20 @@
+meta {
+  name: Get Tier Progress
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{baseUrl}}/customers/{{customerId}}/tier-progress
+  body: none
+  auth: inherit
+}
+
+headers {
+  apikey: {{apikey}}
+  secretkey: {{secretkey}}
+}
+
+settings {
+  encodeUrl: true
+}

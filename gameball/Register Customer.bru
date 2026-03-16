@@ -1,0 +1,39 @@
+meta {
+  name: Register Customer
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/customers
+  body: json
+  auth: inherit
+}
+
+headers {
+  apikey: {{apikey}}
+}
+
+body:json {
+  {
+    "customerId": "{{customerId}}",
+    "email": "reem@example.com",
+    "mobile": "+201012345678",
+    "customerAttributes": {
+      "displayName": "Reem abdelghany",
+      "firstName": "reem",
+      "lastName": "abdelghany",
+      "email": "reem.abdelghany@example.com",
+      "mobile": "+201012345678",
+      "gender": "female",
+      "dateOfBirth": "1992-05-14",
+      "joinDate": "2025-03-15",
+      "source": "urban_threads_web"
+    },
+    "guest": false
+  }
+}
+
+settings {
+  encodeUrl: true
+}

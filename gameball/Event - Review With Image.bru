@@ -1,0 +1,36 @@
+meta {
+  name: Event - Review With Image
+  type: http
+  seq: 7
+}
+
+post {
+  url: {{baseUrl}}/events
+  body: json
+  auth: inherit
+}
+
+headers {
+  apikey: {{apikey}}
+}
+
+body:json {
+  {
+    "customerId": "{{customerId}}",
+    "events": {
+      "write_review": {
+        "product_id": "PROD_JEANS_001",
+        "product_name": "Slim Fit Denim Jeans",
+        "rating": 5,
+        "review_text": "Absolutely love these jeans!",
+        "has_image": true,
+        "review_type": "with_image",
+        "platform": "web"
+      }
+    }
+  }
+}
+
+settings {
+  encodeUrl: true
+}

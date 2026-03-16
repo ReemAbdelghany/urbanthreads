@@ -1,0 +1,20 @@
+meta {
+  name: Get Order Transactions
+  type: http
+  seq: 11
+}
+
+get {
+  url: {{baseUrl}}/orders/ORD_UT_TEST_001/transactions
+  body: none
+  auth: inherit
+}
+
+headers {
+  apikey: {{apikey}}
+  secretkey: {{secretkey}}
+}
+
+settings {
+  encodeUrl: true
+}
