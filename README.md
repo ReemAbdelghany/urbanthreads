@@ -109,5 +109,5 @@ clothing-app_urbanthreads/
 ## Resources
 
 - [Gameball API Documentation](https://developer.gameball.co)
-- [Integration Notes](./INTEGRATION_NOTES.md) — full explanation of every API used, assumptions, and production recommendations
+- [Integration Notes](https://github.com/ReemAbdelghany/urbanthreads/blob/main/clothing-app_urbanthreads/INTEGRATION.md) — full explanation of every API used, assumptions, and production recommendations
 - [Bruno Collection](./gameball/) — API test collection you can import to test every endpoint in isolation before running the app
